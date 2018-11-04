@@ -2,4 +2,5 @@
 [![Build Status](https://travis-ci.org/Craetion5/ohtu-viikko1.svg?branch=master)](https://travis-ci.org/Craetion5/ohtu-viikko1)
 
 [![codecov](https://codecov.io/gh/Craetion5/ohtu-viikko1/branch/master/graph/badge.svg)](https://codecov.io/gh/Craetion5/ohtu-viikko1)
-mainin huomiotta jättävä loitsu ei toiminut :(
+
+Tehtävät tehty paitsi 13 (mainin huomiotta jättävä loitsu ei toiminut :( ) ja 17 (yksikkötestailu alkoi raivostuttaa jo tehtävässä 8)
