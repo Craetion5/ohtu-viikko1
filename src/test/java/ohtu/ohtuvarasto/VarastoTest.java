@@ -13,6 +13,7 @@ import static org.junit.Assert.*;
 public class VarastoTest {
 
     Varasto varasto;
+    Varasto varasto2;
     double vertailuTarkkuus = 0.0001;
 
     @Before
@@ -65,4 +66,54 @@ public class VarastoTest {
         assertEquals(4, varasto.paljonkoMahtuu(), vertailuTarkkuus);
     }
 
+    @Test
+    public void eiMahduLiikaaTavaraa() {
+        varasto.lisaaVarastoon(42);
+        assertEquals(10, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void yritetaanOttaaLiikaa() {
+        varasto.lisaaVarastoon(5);
+        varasto.otaVarastosta(8);
+
+        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void huonoVarasto() {
+        varasto2 = new Varasto(-42);
+        assertEquals(0, varasto2.getTilavuus(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void huonoLisaysJaOtto() {
+        varasto.lisaaVarastoon(2);
+        varasto.lisaaVarastoon(-42);
+        varasto.otaVarastosta(-42);
+        assertEquals(2, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void toStringToimii() {
+        assertEquals("saldo = 0.0, vielä tilaa 10.0", varasto.toString());
+    }
+
+    @Test
+    public void varastoJossaAlkuSaldo() {
+        varasto2 = new Varasto(11, 5);
+        assertEquals("saldo = 5.0, vielä tilaa 6.0", varasto2.toString());
+    }
+    
+    @Test
+    public void huonoVarastoJossaHuonoAlkuSaldo() {
+        varasto2 = new Varasto(-666, -666);
+        assertEquals("saldo = 0.0, vielä tilaa 0.0", varasto2.toString());
+    }
+
+    @Test
+    public void varastoJossaLiikaaAlkuSaldoa() {
+        varasto2 = new Varasto(10, 666);
+        assertEquals("saldo = 10.0, vielä tilaa 0.0", varasto2.toString());
+    }
 }
