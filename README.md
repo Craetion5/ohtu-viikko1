@@ -3,4 +3,4 @@
 
 [![codecov](https://codecov.io/gh/Craetion5/ohtu-viikko1/branch/master/graph/badge.svg)](https://codecov.io/gh/Craetion5/ohtu-viikko1)
 
-Tehtävät tehty paitsi 13 (mainin huomiotta jättävä loitsu ei toiminut :( ) ja 17 (yksikkötestailu alkoi raivostuttaa jo tehtävässä 8)
+Tehtävät tehty paitsi 13 (mainin huomiotta jättävä loitsu ei toiminut :( ) ja 16 (yksikkötestailu alkoi raivostuttaa jo tehtävässä 8)
