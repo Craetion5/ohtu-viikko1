@@ -108,7 +108,7 @@ public class VarastoTest {
     @Test
     public void huonoVarastoJossaHuonoAlkuSaldo() {
         varasto2 = new Varasto(-666, -666);
-        assertEquals("saldo = 0.0, vielä tilaa 0.0", varasto2.toString());
+        assertEquals("saldo = 0.0, vielä tilaa 420.0", varasto2.toString());
     }
 
     @Test
